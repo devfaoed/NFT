@@ -15,14 +15,14 @@ const methodOverride = require("method-override");
  
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/MINT", {useNewUrlParser: true, useUnifiedTopology: true}, function(err){
-    if(err){
-        console.log(err)
-    }
-    else{
-        console.log("database connected successfully");
-    }
-});
+// mongoose.connect("mongodb://localhost/MINT", {useNewUrlParser: true, useUnifiedTopology: true}, function(err){
+//     if(err){
+//         console.log(err)
+//     }
+//     else{
+//         console.log("database connected successfully");
+//     }
+// });
 
 //conecting to mongodb cloud online
 
@@ -35,14 +35,14 @@ const uri = "mongodb+srv://adedokun:adedokun@cluster0.dvnvi.mongodb.net/PEA?retr
 //   client.close();
 // });
 
-// mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true}, function(err){
-//     if(err){
-//         console.log(err)
-//     }
-//     else{
-//         console.log("database connected successfully");
-//     }
-// });
+mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true}, function(err){
+    if(err){
+        console.log(err)
+    }
+    else{
+        console.log("database connected successfully");
+    }
+});
 
 
 
